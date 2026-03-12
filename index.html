@@ -1,0 +1,1821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="All Brothers Lawn Squad LLC — family-owned lawn care, pest control & snow removal serving Union City, Richmond, Muncie & Eastern Indiana since 2011. Call (765) 371-4186 for a free consultation.">
+  <meta name="keywords" content="lawn care Union City Indiana, lawn mowing Richmond IN, snow removal Muncie, pest control Eastern Indiana, fertilization weed control, aeration seeding">
+  <meta name="robots" content="index, follow">
+  <meta name="geo.region" content="US-IN">
+  <meta name="geo.placename" content="Union City, Indiana">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="All Brothers Lawn Squad LLC — Lawn Care, Pest Control & Snow Removal">
+  <meta property="og:description" content="Family-owned lawn care serving Eastern Indiana & Western Ohio since 2011. Free consultations available.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lawn-squad.com">
+  <meta property="og:locale" content="en_US">
+
+  <title>All Brothers Lawn Squad LLC — Lawn Care, Pest Control & Snow Removal | Union City, IN</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://lawn-squad.com",
+    "name": "All Brothers Lawn Squad LLC",
+    "description": "Family-owned lawn care, pest control, and snow removal serving Eastern Indiana and Western Ohio since 2011.",
+    "url": "https://lawn-squad.com",
+    "telephone": "+17653714186",
+    "foundingDate": "2011",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Union City",
+      "addressRegion": "IN",
+      "postalCode": "47390",
+      "addressCountry": "US"
+    },
+    "areaServed": [
+      {"@type": "City", "name": "Union City", "containedInPlace": {"@type": "State", "name": "Indiana"}},
+      {"@type": "City", "name": "Richmond", "containedInPlace": {"@type": "State", "name": "Indiana"}},
+      {"@type": "City", "name": "Muncie", "containedInPlace": {"@type": "State", "name": "Indiana"}},
+      {"@type": "City", "name": "Winchester", "containedInPlace": {"@type": "State", "name": "Indiana"}},
+      {"@type": "City", "name": "Portland", "containedInPlace": {"@type": "State", "name": "Indiana"}},
+      {"@type": "City", "name": "Greenville", "containedInPlace": {"@type": "State", "name": "Ohio"}}
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Services",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Lawn Care & Maintenance"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Pest Control"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Snow Removal"}}
+      ]
+    },
+    "sameAs": []
+  }
+  </script>
+
+  <style>
+    /* ========== RESET & VARIABLES ========== */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --green-deep: #075b31;
+      --green-dark: #054523;
+      --green-light: #0a7a42;
+      --green-pale: #e8f5e9;
+      --amber: #c8962e;
+      --amber-light: #dbb05a;
+      --amber-glow: #c8962e33;
+      --cream: #f5f2eb;
+      --cream-dark: #ece7dc;
+      --charcoal: #282a2b;
+      --charcoal-light: #3a3d3e;
+      --white: #ffffff;
+      --text-body: #4a4a4a;
+      --text-light: #7a7a7a;
+
+      --font-display: 'DM Serif Display', Georgia, serif;
+      --font-body: 'Outfit', system-ui, sans-serif;
+
+      --space-xs: 0.5rem;
+      --space-sm: 1rem;
+      --space-md: 2rem;
+      --space-lg: 4rem;
+      --space-xl: 6rem;
+      --space-2xl: 8rem;
+
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 16px;
+
+      --shadow-card: 0 4px 24px rgba(0,0,0,0.08);
+      --shadow-card-hover: 0 12px 40px rgba(0,0,0,0.14);
+      --shadow-heavy: 0 20px 60px rgba(0,0,0,0.18);
+
+      --transition: 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--charcoal);
+      line-height: 1.7;
+      background: var(--cream);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    /* ========== UTILITY ========== */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 var(--space-md);
+    }
+
+    .section-label {
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: var(--space-xs);
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 1.15;
+      color: var(--charcoal);
+      margin-bottom: var(--space-sm);
+    }
+
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: var(--text-light);
+      max-width: 560px;
+      line-height: 1.7;
+    }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+
+    /* ========== NOISE TEXTURE OVERLAY ========== */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      opacity: 0.025;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 256px 256px;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    /* ========== HEADER / NAV ========== */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: var(--space-sm) 0;
+      transition: background var(--transition), box-shadow var(--transition), padding var(--transition);
+    }
+    .site-header.scrolled {
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+      padding: 0.6rem 0;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+      background: var(--green-deep);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .logo-icon::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 24px;
+      height: 28px;
+      background: var(--green-light);
+      clip-path: polygon(50% 0%, 20% 100%, 80% 100%);
+    }
+    .logo-icon svg {
+      position: relative;
+      z-index: 1;
+    }
+    .logo-text {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      color: var(--charcoal);
+      line-height: 1.1;
+    }
+    .logo-text span {
+      display: block;
+      font-family: var(--font-body);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-top: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    .nav-links a {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--charcoal);
+      position: relative;
+      transition: color var(--transition);
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--green-deep);
+      transition: width var(--transition);
+    }
+    .nav-links a:hover { color: var(--green-deep); }
+    .nav-links a:hover::after { width: 100%; }
+
+    .nav-cta {
+      font-size: 0.85rem !important;
+      font-weight: 600 !important;
+      background: var(--green-deep);
+      color: var(--white) !important;
+      padding: 0.65rem 1.5rem;
+      border-radius: 50px;
+      transition: background var(--transition), transform var(--transition) !important;
+    }
+    .nav-cta::after { display: none !important; }
+    .nav-cta:hover {
+      background: var(--green-dark) !important;
+      color: var(--white) !important;
+      transform: translateY(-1px);
+    }
+
+    /* Mobile menu toggle */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .menu-toggle span {
+      width: 26px;
+      height: 2.5px;
+      background: var(--charcoal);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+    .menu-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .menu-toggle.active span:nth-child(2) { opacity: 0; }
+    .menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+    /* ========== HERO ========== */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(155deg, var(--green-deep) 0%, var(--green-dark) 55%, #032e18 100%);
+      overflow: hidden;
+    }
+
+    /* Topographic line pattern */
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0.06;
+      background-image:
+        repeating-radial-gradient(ellipse at 20% 60%, transparent 0, transparent 38px, rgba(255,255,255,0.3) 39px, transparent 40px),
+        repeating-radial-gradient(ellipse at 80% 30%, transparent 0, transparent 52px, rgba(255,255,255,0.2) 53px, transparent 54px),
+        repeating-radial-gradient(ellipse at 50% 80%, transparent 0, transparent 28px, rgba(255,255,255,0.25) 29px, transparent 30px);
+    }
+
+    /* Diagonal grass blades */
+    .hero-blades {
+      position: absolute;
+      right: -60px;
+      bottom: -40px;
+      width: 500px;
+      height: 600px;
+      opacity: 0.08;
+    }
+    .hero-blades div {
+      position: absolute;
+      bottom: 0;
+      width: 6px;
+      background: linear-gradient(to top, transparent, var(--white));
+      border-radius: 3px;
+      transform-origin: bottom center;
+    }
+    .hero-blades div:nth-child(1) { left: 30%; height: 340px; transform: rotate(-12deg); }
+    .hero-blades div:nth-child(2) { left: 40%; height: 420px; transform: rotate(-6deg); }
+    .hero-blades div:nth-child(3) { left: 50%; height: 380px; transform: rotate(2deg); }
+    .hero-blades div:nth-child(4) { left: 60%; height: 460px; transform: rotate(8deg); }
+    .hero-blades div:nth-child(5) { left: 70%; height: 350px; transform: rotate(14deg); }
+    .hero-blades div:nth-child(6) { left: 80%; height: 300px; transform: rotate(20deg); }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: calc(var(--space-2xl) + 40px) 0 var(--space-2xl);
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 50px;
+      padding: 0.4rem 1.2rem;
+      margin-bottom: var(--space-md);
+      backdrop-filter: blur(8px);
+    }
+    .hero-badge-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--amber);
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+    .hero-badge span {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.85);
+      letter-spacing: 0.08em;
+    }
+
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.8rem, 7vw, 5rem);
+      line-height: 1.05;
+      color: var(--white);
+      margin-bottom: var(--space-md);
+      max-width: 700px;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--amber-light);
+    }
+
+    .hero-description {
+      font-size: 1.15rem;
+      color: rgba(255,255,255,0.7);
+      max-width: 520px;
+      margin-bottom: var(--space-lg);
+      line-height: 1.8;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+
+    .btn-primary {
+      background: var(--amber);
+      color: var(--white);
+    }
+    .btn-primary:hover {
+      background: var(--amber-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px var(--amber-glow);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid rgba(255,255,255,0.3);
+    }
+    .btn-outline:hover {
+      border-color: var(--white);
+      background: rgba(255,255,255,0.08);
+      transform: translateY(-2px);
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: var(--space-lg);
+      margin-top: var(--space-xl);
+      padding-top: var(--space-md);
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .hero-stat strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      color: var(--white);
+    }
+    .hero-stat span {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.5);
+      font-weight: 500;
+    }
+
+    /* ========== SERVICES ========== */
+    .services {
+      padding: var(--space-2xl) 0;
+      background: var(--cream);
+      position: relative;
+    }
+
+    .services-header {
+      text-align: center;
+      margin-bottom: var(--space-xl);
+    }
+    .services-header .section-subtitle {
+      margin: 0 auto;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-md);
+    }
+
+    .service-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: var(--space-md);
+      position: relative;
+      overflow: hidden;
+      transition: transform var(--transition), box-shadow var(--transition);
+      border: 1px solid rgba(0,0,0,0.04);
+    }
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-card-hover);
+    }
+
+    .service-card-accent {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+    }
+    .service-card:nth-child(1) .service-card-accent { background: var(--green-deep); }
+    .service-card:nth-child(2) .service-card-accent { background: var(--amber); }
+    .service-card:nth-child(3) .service-card-accent { background: var(--charcoal); }
+
+    .service-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: var(--space-sm);
+    }
+    .service-card:nth-child(1) .service-icon { background: var(--green-pale); color: var(--green-deep); }
+    .service-card:nth-child(2) .service-icon { background: #fef3e0; color: var(--amber); }
+    .service-card:nth-child(3) .service-icon { background: #eee; color: var(--charcoal); }
+
+    .service-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: var(--charcoal);
+    }
+
+    .service-card p {
+      font-size: 0.95rem;
+      color: var(--text-light);
+      margin-bottom: var(--space-sm);
+    }
+
+    .service-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .service-list li {
+      font-size: 0.88rem;
+      color: var(--text-body);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+    .service-list li::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--green-deep);
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 0.55rem;
+    }
+    .service-card:nth-child(2) .service-list li::before { background: var(--amber); }
+    .service-card:nth-child(3) .service-list li::before { background: var(--charcoal); }
+
+    .service-card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-weight: 600;
+      font-size: 0.88rem;
+      margin-top: var(--space-sm);
+      color: var(--green-deep);
+      transition: gap var(--transition);
+    }
+    .service-card:nth-child(2) .service-card-link { color: var(--amber); }
+    .service-card:nth-child(3) .service-card-link { color: var(--charcoal); }
+    .service-card-link:hover { gap: 0.7rem; }
+
+    /* ========== ABOUT ========== */
+    .about {
+      padding: var(--space-2xl) 0;
+      background: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--green-pale) 0%, transparent 70%);
+      opacity: 0.5;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-xl);
+      align-items: center;
+    }
+
+    .about-visual {
+      position: relative;
+    }
+
+    .about-image-frame {
+      background: linear-gradient(135deg, var(--green-deep), var(--green-dark));
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+      position: relative;
+      overflow: hidden;
+      min-height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .about-image-frame::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0.08;
+      background-image:
+        repeating-radial-gradient(ellipse at 30% 50%, transparent 0, transparent 20px, rgba(255,255,255,0.4) 21px, transparent 22px),
+        repeating-radial-gradient(ellipse at 70% 40%, transparent 0, transparent 35px, rgba(255,255,255,0.3) 36px, transparent 37px);
+    }
+
+    .about-year {
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .about-year-number {
+      font-family: var(--font-display);
+      font-size: 7rem;
+      color: var(--white);
+      line-height: 1;
+      opacity: 0.15;
+    }
+    .about-year-text {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      color: var(--white);
+      margin-top: -1.5rem;
+    }
+    .about-year-sub {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.6);
+      margin-top: 0.5rem;
+    }
+
+    .about-floating-card {
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      background: var(--white);
+      padding: 1.2rem 1.5rem;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-heavy);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      z-index: 2;
+    }
+    .about-floating-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--green-pale);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--green-deep);
+    }
+    .about-floating-card strong {
+      display: block;
+      font-size: 0.95rem;
+      color: var(--charcoal);
+    }
+    .about-floating-card span {
+      font-size: 0.8rem;
+      color: var(--text-light);
+    }
+
+    .about-content .section-title { margin-top: 0.5rem; }
+    .about-text {
+      font-size: 1rem;
+      color: var(--text-body);
+      margin: var(--space-sm) 0 var(--space-md);
+      line-height: 1.85;
+    }
+
+    .about-values {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-sm);
+    }
+    .about-value {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+    .about-value-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--cream);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--green-deep);
+      font-size: 1rem;
+    }
+    .about-value strong {
+      display: block;
+      font-size: 0.95rem;
+      color: var(--charcoal);
+      margin-bottom: 2px;
+    }
+    .about-value span {
+      font-size: 0.88rem;
+      color: var(--text-light);
+    }
+
+    /* ========== SERVICE AREA ========== */
+    .area {
+      padding: var(--space-2xl) 0;
+      background: var(--charcoal);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Topo pattern in area */
+    .area::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0.04;
+      background-image:
+        repeating-radial-gradient(ellipse at 40% 50%, transparent 0, transparent 60px, rgba(255,255,255,0.5) 61px, transparent 62px),
+        repeating-radial-gradient(ellipse at 60% 40%, transparent 0, transparent 90px, rgba(255,255,255,0.3) 91px, transparent 92px),
+        repeating-radial-gradient(ellipse at 25% 70%, transparent 0, transparent 45px, rgba(255,255,255,0.4) 46px, transparent 47px);
+    }
+
+    .area .section-title { color: var(--white); }
+    .area .section-subtitle { color: rgba(255,255,255,0.5); }
+
+    .area-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-xl);
+      align-items: center;
+      margin-top: var(--space-lg);
+    }
+
+    .area-towns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-sm);
+    }
+
+    .area-town {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius-md);
+      padding: 1rem 1.25rem;
+      transition: all var(--transition);
+    }
+    .area-town:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: var(--amber);
+    }
+    .area-town h4 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      color: var(--white);
+      margin-bottom: 0.2rem;
+    }
+    .area-town span {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.4);
+    }
+
+    .area-map-visual {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .area-compass {
+      width: 280px;
+      height: 280px;
+      border: 2px solid rgba(255,255,255,0.1);
+      border-radius: 50%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .area-compass::before {
+      content: '';
+      width: 200px;
+      height: 200px;
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 50%;
+      position: absolute;
+    }
+    .area-compass::after {
+      content: '';
+      width: 120px;
+      height: 120px;
+      border: 1px solid rgba(255,255,255,0.04);
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    .area-center {
+      width: 16px;
+      height: 16px;
+      background: var(--amber);
+      border-radius: 50%;
+      box-shadow: 0 0 20px var(--amber-glow), 0 0 40px rgba(200, 150, 46, 0.15);
+      position: relative;
+      z-index: 1;
+    }
+
+    .area-direction {
+      position: absolute;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.4);
+      letter-spacing: 0.1em;
+    }
+    .area-direction.n { top: -8px; left: 50%; transform: translateX(-50%); }
+    .area-direction.s { bottom: -8px; left: 50%; transform: translateX(-50%); }
+    .area-direction.e { right: -8px; top: 50%; transform: translateY(-50%); }
+    .area-direction.w { left: -8px; top: 50%; transform: translateY(-50%); }
+
+    .area-direction-label {
+      position: absolute;
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.65);
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .area-direction-label.north { top: 24px; left: 50%; transform: translateX(-50%); }
+    .area-direction-label.south { bottom: 24px; left: 50%; transform: translateX(-50%); }
+    .area-direction-label.east { right: 20px; top: 50%; transform: translateY(-50%); }
+    .area-direction-label.west { left: 20px; top: 50%; transform: translateY(-50%); }
+
+    /* ========== TRUST / CERTIFICATIONS ========== */
+    .trust {
+      padding: var(--space-xl) 0;
+      background: var(--cream);
+      border-top: 1px solid var(--cream-dark);
+    }
+
+    .trust-inner {
+      text-align: center;
+    }
+
+    .trust-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: var(--space-md);
+      margin-top: var(--space-md);
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: var(--white);
+      padding: 0.8rem 1.2rem;
+      border-radius: 50px;
+      border: 1px solid rgba(0,0,0,0.06);
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-body);
+      transition: all var(--transition);
+    }
+    .trust-item:hover {
+      border-color: var(--green-deep);
+      box-shadow: var(--shadow-card);
+    }
+    .trust-item svg {
+      color: var(--green-deep);
+      flex-shrink: 0;
+    }
+
+    /* ========== PROGRAMS (GreenCare + Referral) ========== */
+    .programs {
+      padding: var(--space-2xl) 0;
+      background: var(--white);
+    }
+
+    .programs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-md);
+    }
+
+    .program-card {
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .program-card.troops {
+      background: linear-gradient(135deg, var(--green-deep), var(--green-dark));
+      color: var(--white);
+    }
+    .program-card.troops h3 { color: var(--white); }
+    .program-card.troops p { color: rgba(255,255,255,0.75); }
+
+    .program-card.referral {
+      background: var(--cream);
+      border: 1px solid var(--cream-dark);
+    }
+
+    .program-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      margin-bottom: 0.75rem;
+    }
+    .program-card p {
+      font-size: 0.95rem;
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+
+    .program-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: var(--space-sm);
+      font-size: 1.5rem;
+    }
+    .troops .program-icon { background: rgba(255,255,255,0.12); }
+    .referral .program-icon { background: var(--white); }
+
+    /* ========== CONTACT ========== */
+    .contact {
+      padding: var(--space-2xl) 0;
+      background: var(--cream);
+      position: relative;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-xl);
+    }
+
+    .contact-info { padding-top: var(--space-sm); }
+
+    .contact-method {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: var(--space-md);
+    }
+    .contact-method-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--white);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--green-deep);
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+    .contact-method h4 {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-bottom: 0.3rem;
+    }
+    .contact-method a,
+    .contact-method p {
+      font-size: 1.05rem;
+      color: var(--charcoal);
+      font-weight: 500;
+    }
+    .contact-method a:hover { color: var(--green-deep); }
+
+    .contact-form-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+      box-shadow: var(--shadow-card);
+    }
+
+    .contact-form-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      margin-bottom: 0.3rem;
+    }
+    .contact-form-card > p {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      margin-bottom: var(--space-md);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-sm);
+    }
+
+    .form-group {
+      margin-bottom: var(--space-sm);
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--charcoal);
+      margin-bottom: 0.4rem;
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1.5px solid var(--cream-dark);
+      border-radius: var(--radius-md);
+      font-family: var(--font-body);
+      font-size: 0.92rem;
+      color: var(--charcoal);
+      background: var(--cream);
+      transition: border-color var(--transition), background var(--transition);
+      outline: none;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: var(--green-deep);
+      background: var(--white);
+    }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+
+    .btn-submit {
+      width: 100%;
+      padding: 1rem;
+      background: var(--green-deep);
+      color: var(--white);
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.95rem;
+      border: none;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+    .btn-submit:hover {
+      background: var(--green-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 8px 30px rgba(7,91,49,0.25);
+    }
+
+    /* ========== FOOTER ========== */
+    .site-footer {
+      background: var(--charcoal);
+      color: rgba(255,255,255,0.6);
+      padding: var(--space-xl) 0 var(--space-md);
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: var(--space-xl);
+      padding-bottom: var(--space-lg);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .footer-brand .logo-text { color: var(--white); }
+    .footer-brand p {
+      font-size: 0.9rem;
+      margin-top: var(--space-sm);
+      max-width: 320px;
+      line-height: 1.7;
+    }
+
+    .footer-col h4 {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      color: var(--white);
+      margin-bottom: var(--space-sm);
+    }
+    .footer-col a {
+      display: block;
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.5);
+      padding: 0.3rem 0;
+      transition: color var(--transition);
+    }
+    .footer-col a:hover { color: var(--amber); }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: var(--space-md);
+      font-size: 0.82rem;
+    }
+
+    /* ========== RESPONSIVE — TABLET ========== */
+    @media (max-width: 968px) {
+      .container { padding: 0 var(--space-sm); }
+
+      .nav-links { display: none; }
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        padding: var(--space-md);
+        box-shadow: var(--shadow-card);
+        gap: 0;
+        border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+      }
+      .nav-links.open a {
+        padding: 0.85rem var(--space-sm);
+        border-bottom: 1px solid var(--cream-dark);
+        font-size: 1rem;
+      }
+      .nav-links.open a:last-child { border-bottom: none; }
+      .nav-links.open .nav-cta {
+        margin-top: var(--space-sm);
+        text-align: center;
+        justify-content: center;
+        padding: 1rem;
+        border-radius: var(--radius-md);
+      }
+      .menu-toggle { display: flex; }
+
+      .services-grid { grid-template-columns: 1fr; max-width: 500px; margin: 0 auto; }
+      .about-grid { grid-template-columns: 1fr; gap: var(--space-lg); }
+      .about-visual { order: -1; }
+      .area-grid { grid-template-columns: 1fr; }
+      .area-map-visual { margin-top: var(--space-md); }
+      .programs-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; gap: var(--space-md); }
+      .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
+      .hero-stats { gap: var(--space-md); }
+
+      .about-image-frame { min-height: 300px; }
+      .about-floating-card { bottom: -10px; right: 10px; }
+    }
+
+    /* ========== RESPONSIVE — MOBILE ========== */
+    @media (max-width: 600px) {
+      :root {
+        --space-lg: 2.5rem;
+        --space-xl: 4rem;
+        --space-2xl: 5rem;
+      }
+
+      /* Hero mobile */
+      .hero { min-height: auto; padding-bottom: var(--space-lg); }
+      .hero-content { padding: calc(80px + var(--space-lg)) 0 var(--space-md); }
+      .hero h1 { font-size: 2.2rem; line-height: 1.12; }
+      .hero-description { font-size: 1rem; margin-bottom: var(--space-md); line-height: 1.7; }
+      .hero-badge { margin-bottom: var(--space-sm); padding: 0.35rem 1rem; }
+      .hero-badge span { font-size: 0.72rem; }
+      .hero-actions { flex-direction: column; align-items: stretch; gap: 0.75rem; }
+      .btn { justify-content: center; padding: 0.9rem 1.5rem; font-size: 0.9rem; }
+      .hero-stats {
+        flex-direction: row;
+        gap: 0;
+        justify-content: space-between;
+        margin-top: var(--space-lg);
+        padding-top: var(--space-sm);
+      }
+      .hero-stat { text-align: center; flex: 1; }
+      .hero-stat strong { font-size: 1.6rem; }
+      .hero-stat span { font-size: 0.75rem; }
+      .hero-blades { display: none; }
+
+      /* Section spacing & typography mobile */
+      .section-title { font-size: 1.8rem; }
+      .section-subtitle { font-size: 0.95rem; }
+      .section-label { font-size: 0.72rem; }
+
+      /* Services mobile */
+      .services-grid { max-width: 100%; }
+      .service-card { padding: 1.5rem; }
+      .service-card h3 { font-size: 1.3rem; }
+      .service-icon { width: 48px; height: 48px; }
+
+      /* About mobile */
+      .about-image-frame { min-height: 240px; padding: var(--space-md); }
+      .about-year-number { font-size: 5rem; }
+      .about-year-text { font-size: 1.4rem; }
+      .about-floating-card {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        margin-top: var(--space-sm);
+        box-shadow: var(--shadow-card);
+      }
+      .about-text { font-size: 0.95rem; line-height: 1.75; }
+
+      /* Service area mobile */
+      .area-towns { grid-template-columns: 1fr; gap: 0.75rem; }
+      .area-town { padding: 0.85rem 1rem; }
+      .area-town h4 { font-size: 1.05rem; }
+      .area-compass { width: 200px; height: 200px; }
+      .area-compass::before { width: 150px; height: 150px; }
+      .area-compass::after { width: 90px; height: 90px; }
+      .area-direction-label { font-size: 0.78rem; }
+      .area-direction-label.east { right: -10px; }
+      .area-direction-label.west { left: -10px; }
+
+      /* Trust badges mobile */
+      .trust-grid { gap: 0.6rem; }
+      .trust-item { font-size: 0.78rem; padding: 0.65rem 1rem; }
+      .trust-item svg { width: 16px; height: 16px; }
+
+      /* Programs mobile */
+      .program-card { padding: var(--space-md); }
+      .program-card h3 { font-size: 1.3rem; }
+      .program-card p { font-size: 0.9rem; }
+
+      /* Contact mobile */
+      .form-row { grid-template-columns: 1fr; }
+      .contact-form-card { padding: 1.5rem; }
+      .contact-form-card h3 { font-size: 1.3rem; }
+      .contact-method-icon { width: 42px; height: 42px; }
+      .form-group input,
+      .form-group textarea,
+      .form-group select { padding: 0.85rem 1rem; font-size: 16px; /* prevents iOS zoom */ }
+      .btn-submit { padding: 1rem; font-size: 1rem; }
+
+      /* Footer mobile */
+      .footer-top { gap: var(--space-md); }
+      .footer-brand p { font-size: 0.85rem; }
+      .footer-col h4 { font-size: 1rem; margin-bottom: 0.5rem; }
+      .footer-col a { font-size: 0.85rem; }
+      .footer-bottom { font-size: 0.75rem; }
+
+      /* Fix tap targets — minimum 44px touch targets */
+      .nav-links.open a { min-height: 44px; display: flex; align-items: center; }
+      .service-card-link { min-height: 44px; display: inline-flex; align-items: center; }
+    }
+
+    /* ========== RESPONSIVE — SMALL PHONES ========== */
+    @media (max-width: 380px) {
+      .hero h1 { font-size: 1.9rem; }
+      .hero-stat strong { font-size: 1.4rem; }
+      .logo-text { font-size: 1.1rem; }
+      .logo-icon { width: 36px; height: 36px; }
+      .section-title { font-size: 1.6rem; }
+      .area-compass { width: 170px; height: 170px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="#" class="logo" aria-label="All Brothers Lawn Squad — Home">
+        <div class="logo-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 22h20L12 2z"/></svg>
+        </div>
+        <div class="logo-text">
+          All Brothers<br>Lawn Squad
+          <span>Est. 2011 &bull; Union City, IN</span>
+        </div>
+      </a>
+      <nav class="nav-links" role="navigation" aria-label="Main navigation">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#area">Service Area</a>
+        <a href="#contact">Contact</a>
+        <a href="tel:+17653714186" class="nav-cta">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          (765) 371-4186
+        </a>
+      </nav>
+      <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="home">
+      <div class="hero-blades" aria-hidden="true">
+        <div></div><div></div><div></div><div></div><div></div><div></div>
+      </div>
+      <div class="container hero-content">
+        <div class="hero-badge">
+          <div class="hero-badge-dot" aria-hidden="true"></div>
+          <span>Now Booking Spring 2026</span>
+        </div>
+        <h1>Your Lawn,<br>Treated Like <em>Our Own</em></h1>
+        <p class="hero-description">Family-owned since 2011, we bring deep agricultural roots to every yard we touch. From first seed to fresh snowfall — your property is in trusted hands.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Free Consultation
+          </a>
+          <a href="tel:+17653714186" class="btn btn-outline">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call Now
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <strong>15+</strong>
+            <span>Years of Service</span>
+          </div>
+          <div class="hero-stat">
+            <strong>6</strong>
+            <span>Counties Served</span>
+          </div>
+          <div class="hero-stat">
+            <strong>3</strong>
+            <span>Core Services</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SERVICES ========== -->
+    <section class="services" id="services" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="services-header reveal">
+          <p class="section-label">What We Do</p>
+          <h2 class="section-title" id="services-heading">Root-to-Tip Lawn Care<br>& Property Services</h2>
+          <p class="section-subtitle">We take a ground-up approach — focusing on soil health, root strength, and long-term results instead of quick fixes.</p>
+        </div>
+        <div class="services-grid">
+          <!-- Lawn Care -->
+          <article class="service-card reveal reveal-delay-1">
+            <div class="service-card-accent" aria-hidden="true"></div>
+            <div class="service-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 2v10l6.5-3"/></svg>
+            </div>
+            <h3>Lawn Care</h3>
+            <p>Complete lawn health programs built on soil science and years of agricultural experience.</p>
+            <ul class="service-list">
+              <li>Seeding &amp; lawn renovation</li>
+              <li>Core aeration</li>
+              <li>Fertilization &amp; weed control</li>
+              <li>Spring &amp; fall cleanup</li>
+              <li>Regular mowing schedules</li>
+              <li>New turf establishment</li>
+            </ul>
+            <a href="#contact" class="service-card-link">Get a free quote <span aria-hidden="true">&rarr;</span></a>
+          </article>
+
+          <!-- Insects & Pests -->
+          <article class="service-card reveal reveal-delay-2">
+            <div class="service-card-accent" aria-hidden="true"></div>
+            <div class="service-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22l1-1h3l9-9"/><path d="M13 3l2.5 2.5"/><circle cx="17" cy="7" r="3"/><path d="M22 2l-1.5 1.5"/></svg>
+            </div>
+            <h3>Insects &amp; Pests</h3>
+            <p>Targeted pest management to protect your lawn and trees from destructive invaders.</p>
+            <ul class="service-list">
+              <li>General lawn pest control</li>
+              <li>Emerald ash borer (EAB) treatment</li>
+              <li>Preventive pest programs</li>
+              <li>Certified applicators</li>
+            </ul>
+            <a href="#contact" class="service-card-link">Get a free quote <span aria-hidden="true">&rarr;</span></a>
+          </article>
+
+          <!-- Snow Removal -->
+          <article class="service-card reveal reveal-delay-3">
+            <div class="service-card-accent" aria-hidden="true"></div>
+            <div class="service-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M2 12h20"/><path d="m4.93 4.93 14.14 14.14"/><path d="m19.07 4.93-14.14 14.14"/></svg>
+            </div>
+            <h3>Snow Removal</h3>
+            <p>Reliable winter services to keep your property safe and accessible all season long.</p>
+            <ul class="service-list">
+              <li>Commercial &amp; residential plowing</li>
+              <li>Salt spreading &amp; ice management</li>
+              <li>Seasonal contracts available</li>
+              <li>24/7 storm response</li>
+            </ul>
+            <a href="#contact" class="service-card-link">Get a free quote <span aria-hidden="true">&rarr;</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section class="about" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-visual reveal">
+            <div class="about-image-frame">
+              <div class="about-year">
+                <div class="about-year-number" aria-hidden="true">2011</div>
+                <div class="about-year-text">Family Owned</div>
+                <div class="about-year-sub">Union City, Indiana</div>
+              </div>
+            </div>
+            <div class="about-floating-card">
+              <div class="about-floating-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <div>
+                <strong>State Certified</strong>
+                <span>IN State Chemist Licensed</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-content reveal reveal-delay-1">
+            <p class="section-label">Our Story</p>
+            <h2 class="section-title" id="about-heading">Rooted in Agriculture,<br>Grown with Care</h2>
+            <p class="about-text">What started as brothers helping neighbors has grown into a trusted name across Eastern Indiana and Western Ohio. Our agricultural background isn't just our history — it's our advantage. We understand soil, seasons, and what it takes to build a lawn from the roots up.</p>
+            <p class="about-text">We treat every lawn as if it were our own. That's not a tagline — it's how we've operated since day one.</p>
+            <div class="about-values">
+              <div class="about-value">
+                <div class="about-value-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </div>
+                <div>
+                  <strong>Family Values</strong>
+                  <span>Honest work, fair prices, real relationships with our customers.</span>
+                </div>
+              </div>
+              <div class="about-value">
+                <div class="about-value-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                </div>
+                <div>
+                  <strong>Agricultural Knowledge</strong>
+                  <span>Deep understanding of Indiana's soil and climate conditions.</span>
+                </div>
+              </div>
+              <div class="about-value">
+                <div class="about-value-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div>
+                  <strong>Year-Round Reliability</strong>
+                  <span>Lawn care in summer, snow removal in winter — we're always here.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SERVICE AREA ========== -->
+    <section class="area" id="area" aria-labelledby="area-heading">
+      <div class="container">
+        <div class="reveal">
+          <p class="section-label">Where We Work</p>
+          <h2 class="section-title" id="area-heading">Serving Eastern Indiana<br>&amp; Western Ohio</h2>
+          <p class="section-subtitle">From our home base in Union City, we cover a wide region across the Indiana-Ohio border.</p>
+        </div>
+        <div class="area-grid">
+          <div class="area-towns reveal reveal-delay-1">
+            <div class="area-town">
+              <h4>Union City</h4>
+              <span>Home Base — Indiana &amp; Ohio</span>
+            </div>
+            <div class="area-town">
+              <h4>Richmond</h4>
+              <span>Wayne County, Indiana</span>
+            </div>
+            <div class="area-town">
+              <h4>Muncie</h4>
+              <span>Delaware County, Indiana</span>
+            </div>
+            <div class="area-town">
+              <h4>Portland</h4>
+              <span>Jay County, Indiana</span>
+            </div>
+            <div class="area-town">
+              <h4>Winchester</h4>
+              <span>Randolph County, Indiana</span>
+            </div>
+            <div class="area-town">
+              <h4>Greenville</h4>
+              <span>Darke County, Ohio</span>
+            </div>
+          </div>
+          <div class="area-map-visual reveal reveal-delay-2" aria-label="Service area compass showing coverage in all directions from Union City">
+            <div class="area-compass">
+              <div class="area-center"></div>
+              <span class="area-direction n">N</span>
+              <span class="area-direction s">S</span>
+              <span class="area-direction e">E</span>
+              <span class="area-direction w">W</span>
+              <span class="area-direction-label north">Portland</span>
+              <span class="area-direction-label south">Winchester</span>
+              <span class="area-direction-label east">Greenville, OH</span>
+              <span class="area-direction-label west">Muncie</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TRUST ========== -->
+    <section class="trust" aria-label="Certifications and memberships">
+      <div class="container trust-inner reveal">
+        <p class="section-label">Trusted &amp; Certified</p>
+        <h2 class="section-title">Backed by Credentials<br>That Matter</h2>
+        <div class="trust-grid">
+          <div class="trust-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            IN State Chemist Certified
+          </div>
+          <div class="trust-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            IN Professional Lawn &amp; Landscape Assoc.
+          </div>
+          <div class="trust-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            Wayne County Chamber of Commerce
+          </div>
+          <div class="trust-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            ServiceChannel Connected Contractor
+          </div>
+          <div class="trust-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            Arborjet Certified Partner
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PROGRAMS ========== -->
+    <section class="programs" aria-label="Special programs">
+      <div class="container">
+        <div class="programs-grid">
+          <div class="program-card troops reveal">
+            <div class="program-icon" aria-hidden="true">&#127894;</div>
+            <h3>GreenCare for Troops</h3>
+            <p>We're proud to participate in the GreenCare for Troops program, providing free lawn care services to families of deployed military personnel. It's one small way we can give back to those who serve.</p>
+          </div>
+          <div class="program-card referral reveal reveal-delay-1">
+            <div class="program-icon" aria-hidden="true">&#129309;</div>
+            <h3>Referral Program</h3>
+            <p>Love your lawn? Spread the word. Refer a friend or neighbor to All Brothers Lawn Squad and you'll both benefit. Ask us about our current referral rewards when you call.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section class="contact" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <p class="section-label">Get In Touch</p>
+            <h2 class="section-title" id="contact-heading">Ready for a<br>Healthier Lawn?</h2>
+            <p class="section-subtitle" style="margin-bottom: var(--space-lg);">Reach out for a free consultation. We'll assess your property and build a plan tailored to your lawn's needs and your budget.</p>
+
+            <div class="contact-method">
+              <div class="contact-method-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <h4>Phone</h4>
+                <a href="tel:+17653714186">(765) 371-4186</a>
+              </div>
+            </div>
+
+            <div class="contact-method">
+              <div class="contact-method-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <h4>Toll-Free</h4>
+                <a href="tel:+18552552767">(855) 255-2767</a>
+              </div>
+            </div>
+
+            <div class="contact-method">
+              <div class="contact-method-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <h4>Location</h4>
+                <p>Union City, Indiana 47390</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="reveal reveal-delay-2">
+            <div class="contact-form-card">
+              <h3>Request a Free Consultation</h3>
+              <p>Fill out the form below and we'll get back to you promptly.</p>
+              <form id="contact-form" action="#" method="POST">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first_name" required autocomplete="given-name">
+                  </div>
+                  <div class="form-group">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last_name" required autocomplete="family-name">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required autocomplete="email">
+                  </div>
+                  <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" autocomplete="tel">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="service">Service Interested In</label>
+                  <select id="service" name="service">
+                    <option value="">Select a service...</option>
+                    <option value="lawn-care">Lawn Care</option>
+                    <option value="pest-control">Insects &amp; Pest Control</option>
+                    <option value="snow-removal">Snow Removal</option>
+                    <option value="multiple">Multiple Services</option>
+                    <option value="not-sure">Not Sure — Need Consultation</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="message">Tell Us About Your Property</label>
+                  <textarea id="message" name="message" rows="4" placeholder="Property size, current condition, specific concerns..."></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Send Consultation Request</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="logo-text">
+            All Brothers<br>Lawn Squad
+            <span>Est. 2011 &bull; Union City, IN</span>
+          </div>
+          <p>Family-owned lawn care, pest control, and snow removal serving Eastern Indiana and Western Ohio since 2011.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="#services">Lawn Care</a>
+          <a href="#services">Pest Control</a>
+          <a href="#services">Snow Removal</a>
+          <a href="#contact">Free Consultation</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="#about">About Us</a>
+          <a href="#area">Service Area</a>
+          <a href="#contact">Contact</a>
+          <a href="tel:+17653714186">(765) 371-4186</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 All Brothers Lawn Squad LLC. All rights reserved.</p>
+        <p>Union City, Indiana 47390</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile sticky CTA bar -->
+  <div class="mobile-cta-bar" aria-label="Quick contact">
+    <a href="tel:+17653714186" class="mobile-cta-btn call">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call Now
+    </a>
+    <a href="#contact" class="mobile-cta-btn consult">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      Free Quote
+    </a>
+  </div>
+
+  <style>
+    .mobile-cta-bar {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      background: var(--white);
+      border-top: 1px solid var(--cream-dark);
+      padding: 0.5rem;
+      gap: 0.5rem;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+    }
+    .mobile-cta-btn {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.85rem;
+      border-radius: var(--radius-md);
+      font-weight: 600;
+      font-size: 0.9rem;
+      min-height: 48px;
+    }
+    .mobile-cta-btn.call {
+      background: var(--green-deep);
+      color: var(--white);
+    }
+    .mobile-cta-btn.consult {
+      background: var(--amber);
+      color: var(--white);
+    }
+    @media (max-width: 600px) {
+      .mobile-cta-bar { display: flex; }
+      /* Add padding to footer so bar doesn't cover content */
+      .site-footer { padding-bottom: 80px; }
+    }
+  </style>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script>
+    // Header scroll effect
+    const header = document.querySelector('.site-header');
+    let lastScroll = 0;
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    // Mobile menu toggle
+    const toggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      toggle.classList.toggle('active');
+      toggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close mobile menu on link click
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        toggle.classList.remove('active');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Scroll reveal (IntersectionObserver)
+    const revealElements = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+    revealElements.forEach(el => observer.observe(el));
+
+    // Contact form (basic client-side handling)
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const btn = this.querySelector('.btn-submit');
+      const originalText = btn.textContent;
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+
+      // Simulate submission — replace with real endpoint
+      setTimeout(() => {
+        btn.textContent = 'Request Sent!';
+        btn.style.background = 'var(--amber)';
+        this.reset();
+        setTimeout(() => {
+          btn.textContent = originalText;
+          btn.style.background = '';
+          btn.disabled = false;
+        }, 3000);
+      }, 1000);
+    });
+  </script>
+</body>
+</html>
