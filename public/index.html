@@ -798,74 +798,6 @@
       color: rgba(255,255,255,0.4);
     }
 
-    .area-map-visual {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-
-    .area-compass {
-      width: 280px;
-      height: 280px;
-      border: 2px solid rgba(255,255,255,0.1);
-      border-radius: 50%;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .area-compass::before {
-      content: '';
-      width: 200px;
-      height: 200px;
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: 50%;
-      position: absolute;
-    }
-    .area-compass::after {
-      content: '';
-      width: 120px;
-      height: 120px;
-      border: 1px solid rgba(255,255,255,0.04);
-      border-radius: 50%;
-      position: absolute;
-    }
-
-    .area-center {
-      width: 16px;
-      height: 16px;
-      background: var(--amber);
-      border-radius: 50%;
-      box-shadow: 0 0 20px var(--amber-glow), 0 0 40px rgba(200, 150, 46, 0.15);
-      position: relative;
-      z-index: 1;
-    }
-
-    .area-direction {
-      position: absolute;
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: rgba(255,255,255,0.4);
-      letter-spacing: 0.1em;
-    }
-    .area-direction.n { top: -8px; left: 50%; transform: translateX(-50%); }
-    .area-direction.s { bottom: -8px; left: 50%; transform: translateX(-50%); }
-    .area-direction.e { right: -8px; top: 50%; transform: translateY(-50%); }
-    .area-direction.w { left: -8px; top: 50%; transform: translateY(-50%); }
-
-    .area-direction-label {
-      position: absolute;
-      font-size: 0.88rem;
-      color: rgba(255,255,255,0.65);
-      font-weight: 500;
-      white-space: nowrap;
-    }
-    .area-direction-label.north { top: 24px; left: 50%; transform: translateX(-50%); }
-    .area-direction-label.south { bottom: 24px; left: 50%; transform: translateX(-50%); }
-    .area-direction-label.east { right: 20px; top: 50%; transform: translateY(-50%); }
-    .area-direction-label.west { left: 20px; top: 50%; transform: translateY(-50%); }
 
     /* ========== TRUST / CERTIFICATIONS ========== */
     .trust {
@@ -1158,7 +1090,6 @@
       .about-grid { grid-template-columns: 1fr; gap: var(--space-lg); }
       .about-visual { order: -1; }
       .area-grid { grid-template-columns: 1fr; }
-      .area-map-visual { margin-top: var(--space-md); }
       .contact-grid { grid-template-columns: 1fr; }
       .footer-top { grid-template-columns: 1fr; gap: var(--space-md); }
       .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
@@ -1168,13 +1099,6 @@
 
       .about-image-frame { min-height: 300px; overflow: hidden; }
       .about-floating-card { bottom: -10px; right: 10px; max-width: 90%; }
-
-      .area-compass { width: 240px; height: 240px; }
-      .area-compass::before { width: 170px; height: 170px; }
-      .area-compass::after { width: 100px; height: 100px; }
-      .area-direction-label { font-size: 0.82rem; }
-      .area-direction-label.east { right: 0; }
-      .area-direction-label.west { left: 0; }
 
       .btn { padding: 0.95rem 1.75rem; font-size: 0.92rem; }
     }
@@ -1237,13 +1161,6 @@
       .area-towns { grid-template-columns: 1fr; gap: 0.75rem; }
       .area-town { padding: 0.85rem 1rem; }
       .area-town h4 { font-size: 1.05rem; }
-      .area-compass { width: 200px; height: 200px; }
-      .area-compass::before { width: 150px; height: 150px; }
-      .area-compass::after { width: 90px; height: 90px; }
-      .area-direction-label { font-size: 0.78rem; }
-      .area-direction-label.east { right: 0; }
-      .area-direction-label.west { left: 0; }
-
       /* Trust badges mobile */
       .trust-grid { gap: 0.6rem; }
       .trust-item { font-size: 0.78rem; padding: 0.65rem 1rem; }
@@ -1283,7 +1200,6 @@
       .logo-text { font-size: 1.1rem; }
       .logo-icon { width: 36px; height: 36px; }
       .section-title { font-size: 1.6rem; }
-      .area-compass { width: 170px; height: 170px; }
     }
   </style>
 </head>
@@ -1486,50 +1402,27 @@
     <!-- ========== SERVICE AREA ========== -->
     <section class="area" id="area" aria-labelledby="area-heading">
       <div class="container">
-        <div class="reveal">
+        <div class="reveal" style="text-align: center; margin-bottom: var(--space-lg);">
           <p class="section-label">Where We Work</p>
-          <h2 class="section-title" id="area-heading">Serving Eastern Indiana<br>&amp; Western Ohio</h2>
-          <p class="section-subtitle">From our home base in Union City, we cover a wide region across the Indiana-Ohio border.</p>
+          <h2 class="section-title" id="area-heading">Service Area</h2>
+          <p class="section-subtitle" style="margin: 0 auto;">Union City, Indiana &amp; surrounding communities within 50 miles — including Muncie, Portland, Winchester, Farmland, Hartford City, and Greenville OH.</p>
         </div>
-        <div class="area-grid">
-          <div class="area-towns reveal reveal-delay-1">
-            <div class="area-town">
-              <h4>Union City</h4>
-              <span>Home Base — Indiana &amp; Ohio</span>
-            </div>
-            <div class="area-town">
-              <h4>Richmond</h4>
-              <span>Wayne County, Indiana</span>
-            </div>
-            <div class="area-town">
-              <h4>Muncie</h4>
-              <span>Delaware County, Indiana</span>
-            </div>
-            <div class="area-town">
-              <h4>Portland</h4>
-              <span>Jay County, Indiana</span>
-            </div>
-            <div class="area-town">
-              <h4>Winchester</h4>
-              <span>Randolph County, Indiana</span>
-            </div>
-            <div class="area-town">
-              <h4>Greenville</h4>
-              <span>Darke County, Ohio</span>
-            </div>
+        <div class="area-towns reveal reveal-delay-1" style="max-width: 800px; margin: 0 auto;">
+          <div class="area-town">
+            <h4>Indiana</h4>
+            <span>Lawn care, pest control &amp; snow removal</span>
           </div>
-          <div class="area-map-visual reveal reveal-delay-2" aria-label="Service area compass showing coverage in all directions from Union City">
-            <div class="area-compass">
-              <div class="area-center"></div>
-              <span class="area-direction n">N</span>
-              <span class="area-direction s">S</span>
-              <span class="area-direction e">E</span>
-              <span class="area-direction w">W</span>
-              <span class="area-direction-label north">Portland</span>
-              <span class="area-direction-label south">Winchester</span>
-              <span class="area-direction-label east">Greenville, OH</span>
-              <span class="area-direction-label west">Muncie</span>
-            </div>
+          <div class="area-town">
+            <h4>Ohio</h4>
+            <span>Lawn care, pest control &amp; snow removal</span>
+          </div>
+          <div class="area-town">
+            <h4>Michigan</h4>
+            <span>Contracting services</span>
+          </div>
+          <div class="area-town">
+            <h4>Kentucky</h4>
+            <span>Contracting services</span>
           </div>
         </div>
       </div>
