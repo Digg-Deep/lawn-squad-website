@@ -914,12 +914,6 @@
       background: var(--white);
     }
 
-    .programs-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--space-md);
-    }
-
     .program-card {
       border-radius: var(--radius-lg);
       padding: var(--space-lg);
@@ -933,11 +927,6 @@
     }
     .program-card.troops h3 { color: var(--white); }
     .program-card.troops p { color: rgba(255,255,255,0.75); }
-
-    .program-card.referral {
-      background: var(--cream);
-      border: 1px solid var(--cream-dark);
-    }
 
     .program-card h3 {
       font-family: var(--font-display);
@@ -961,7 +950,6 @@
       font-size: 1.5rem;
     }
     .troops .program-icon { background: rgba(255,255,255,0.12); }
-    .referral .program-icon { background: var(--white); }
 
     /* ========== CONTACT ========== */
     .contact {
@@ -1171,7 +1159,6 @@
       .about-visual { order: -1; }
       .area-grid { grid-template-columns: 1fr; }
       .area-map-visual { margin-top: var(--space-md); }
-      .programs-grid { grid-template-columns: 1fr; }
       .contact-grid { grid-template-columns: 1fr; }
       .footer-top { grid-template-columns: 1fr; gap: var(--space-md); }
       .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
@@ -1581,17 +1568,10 @@
     <!-- ========== PROGRAMS ========== -->
     <section class="programs" aria-label="Special programs">
       <div class="container">
-        <div class="programs-grid">
-          <div class="program-card troops reveal">
-            <div class="program-icon" aria-hidden="true">&#127894;</div>
-            <h3>GreenCare for Troops</h3>
-            <p>We're proud to participate in the GreenCare for Troops program, providing free lawn care services to families of deployed military personnel. It's one small way we can give back to those who serve.</p>
-          </div>
-          <div class="program-card referral reveal reveal-delay-1">
-            <div class="program-icon" aria-hidden="true">&#129309;</div>
-            <h3>Referral Program</h3>
-            <p>Love your lawn? Spread the word. Refer a friend or neighbor to All Brothers Lawn Squad and you'll both benefit. Ask us about our current referral rewards when you call.</p>
-          </div>
+        <div class="program-card troops reveal" style="max-width: 700px;">
+          <div class="program-icon" aria-hidden="true">&#127894;</div>
+          <h3>GreenCare for Troops</h3>
+          <p>We're proud to participate in the GreenCare for Troops program, providing free lawn care services to families of deployed military personnel. It's one small way we can give back to those who serve.</p>
         </div>
       </div>
     </section>
@@ -1811,16 +1791,27 @@
 
     revealElements.forEach(el => observer.observe(el));
 
-    // Contact form (basic client-side handling)
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
+    // Contact form — POST to /api/contact
+    document.getElementById('contact-form').addEventListener('submit', async function(e) {
       e.preventDefault();
       const btn = this.querySelector('.btn-submit');
       const originalText = btn.textContent;
       btn.textContent = 'Sending...';
       btn.disabled = true;
 
-      // Simulate submission — replace with real endpoint
-      setTimeout(() => {
+      try {
+        const data = Object.fromEntries(new FormData(this));
+        const res = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+
+        if (!res.ok) {
+          const err = await res.json().catch(() => ({}));
+          throw new Error(err.error || 'Something went wrong.');
+        }
+
         btn.textContent = 'Request Sent!';
         btn.style.background = 'var(--amber)';
         this.reset();
@@ -1828,8 +1819,16 @@
           btn.textContent = originalText;
           btn.style.background = '';
           btn.disabled = false;
-        }, 3000);
-      }, 1000);
+        }, 4000);
+      } catch (err) {
+        btn.textContent = 'Error — Please Call Us';
+        btn.style.background = '#c0392b';
+        setTimeout(() => {
+          btn.textContent = originalText;
+          btn.style.background = '';
+          btn.disabled = false;
+        }, 4000);
+      }
     });
   </script>
 </body>
